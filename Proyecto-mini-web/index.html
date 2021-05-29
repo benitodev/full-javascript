@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es" data-dark>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Proyecto web</title>
+    </head>
+    <body data-dark>
+        <header class="header">
+            <div class="title-up"><h1 class="h1" data-special>Ejercitando DOM</h1></div>
+            <section class="container">
+                <button class="panel-btn boton-caja"> 
+                    <img id="boton-menu-close" class="boton-menu-close none bg-color" src="/assets/fuegos-artificiales.svg" alt="fuegos-artificiales-orgullo">
+                    <img id="boton-menu" class="boton-menu" src="/assets/orgullo.svg" alt="boton-orgullo">
+                </button>
+                
+                
+             
+                <nav class="menu">
+                    <a href="#section-1" data-scroll-spy >Reloj Digital y Alarma Sonora</a>
+                    <a href="#section-2" data-scroll-spy>Eventos del teclado</a>
+                    <a href="#section-3" data-scroll-spy>Cuenta regresiva</a>
+                    <a href="#section-4" data-scroll-spy>Responsive Javascript</a>
+                    <a href="#section-5" data-scroll-spy>Responsive Tester</a>
+                    <a href="#section-6" data-scroll-spy>Sección 6</a>
+                    <a href="#section-7" data-scroll-spy>Detección de la conexión</a>
+                    <a href="#section-8" data-scroll-spy>Detección Webcam</a>
+                    <a href="#section-9" data-scroll-spy>Geolocalización</a>
+                    <a href="#section-10" data-scroll-spy>Búsqueda filtrada</a>
+                    <a href="#section-11" data-scroll-spy>Sorteo digital</a>
+                    <a href="#section-12" data-scroll-spy>Slider / Carousel</a>
+                    <a href="#section-13" data-scroll-spy>Intersection Observer</a>
+                    <a href="#section-14" data-scroll-spy>Video Inteligente</a>
+                    <a href="#section-15" data-scroll-spy>Formulario HTML5</a>
+                    <a href="#section-16" data-scroll-spy>Narrador</a>
+                </nav>
+        
+            </section>
+        </header>
+        
+    <main>
+
+        <section id="section-1" data-scroll-spy><h3>Reloj Digital y Alarma Sonora</h3>
+            <div id="reloj"> <h3>00:00:00</h3></div>
+            <div>
+                <button id="activar-reloj">Iniciar reloj</button>
+                <button id="desactivar-reloj">Detener reloj</button>
+                <button id="activar-alarma">Activar alarma</button>
+                <button id="desactivar-alarma">Detener alarma</button>
+            </div>
+        </section>
+        <section id="section-2" class="bg-color-section" data-scroll-spy>
+            <h3>Eventos del Teclado</h3>
+            <article class="stage">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </article>
+        
+        </section>
+        <section id="section-3" data-scroll-spy><h3>Cuenta regresiva</h3>
+            <div id="countdown"></div>
+
+
+        </section>
+
+
+ 
+        <section id="section-4"  class="bg-color-section" data-scroll-spy><h3>Responsive Con Javascript</h3>
+        <div id="responsive-audio"></div>
+        <div id="responsive-maps"></div>
+        </section>
+        <section id="section-5" data-scroll-spy><h3>Responsive Tester</h3>
+        <form id="responsive-tester">
+            <input name="direc" type="url" placeholder="URL" required>
+            <br>
+            <input name="ancho" type="text" placeholder="Anchura" required>
+            <br>
+            <input name="alto" type="text" placeholder="Altura" required>
+            <br>
+            <input name="probar" type="submit" value="Probar">
+            <br>
+            <input name="cerrar" type="button" value="Cerrar">
+        </form>
+        </section>
+        <section id="section-6" class="bg-color-section" data-scroll-spy><h3>Sección 6</h3></section>
+        <section id="section-7" data-scroll-spy><h3>Detección de la conexión</h3></section>
+        <section id="section-8" class="bg-color-section" data-scroll-spy><h3>Detección Webcam</h3>
+        <video id="webcam"></video>
+        <p>Solamente es para enumerar cosas que he programado, este ejercicio se ve efectuado si acepta el permiso al comienzo de cargar la pagina</p>
+        </section>
+        <section id="section-9" data-scroll-spy><h3>Geolocalización</h3>
+        <div id="geolocation"></div>
+        </section>
+        <section id="section-10" class="bg-color-section" data-scroll-spy><h3>Filtro de Búsqueda</h3>
+        <h4>Filtrar búsqueda: </h4>
+        <form id="form-search"> 
+            <input  name="buscar" type="search" placeholder="Búsqueda..." class="card-filter">
+        </form>
+        
+        <article id="cards">
+                <figure class="card">
+                  <img src="https://placeimg.com/300/300/tech" alt="tech">
+                  <figcaption>tech</figcaption>
+                </figure>
+            
+                <figure class="card">
+                  <img src="https://placeimg.com/300/300/animals" alt="animals">
+                  <figcaption>animals</figcaption>
+                </figure>
+            
+                <figure class="card">
+                  <img src="https://placeimg.com/300/300/arch" alt="arch">
+                  <figcaption>arch</figcaption>
+                </figure>
+            
+                <figure class="card">
+                  <img src="https://placeimg.com/300/300/people" alt="people">
+                  <figcaption>people</figcaption>
+                </figure>
+            
+                <figure class="card">
+                  <img src="https://placeimg.com/300/300/nature" alt="nature">
+                  <figcaption>nature</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="https://placeimg.com/300/300/arch" alt="arch">
+                    <figcaption>nature</figcaption>
+                  </figure>
+           </article>
+        </section>
+        
+        <section id="section-11" data-scroll-spy>
+            <h2>Sorteo digital</h2>
+            <ul class="players">
+                <li class="player">vainillas</li>
+                <li class="player">lemon pie</li>
+                <li class="player">selva negra (torta)</li>
+                <li class="player">alfajor</li>
+                <li class="player">budín de pan</li>
+                <li class="player">bizochuelo</li>
+                <li class="player">galletas</li>
+                <li class="player">helado</li>
+                <li class="player">caramelos</li>
+                <li class="player">cupcakes</li>
+            </ul>
+            <button id="winner-btn">Sortea ya!</button>
+            
+        </section>
+        
+        <section id="section-12" data-scroll-spy class="bg-color-section"><h3>Carrousel responsive</h3>
+            <div class="slider">
+                <div class="slider-slides">
+
+                    <div class="slider-slide active">
+                        <img src="https://placeimg.com/500/500/animals" alt="Animales">
+                    </div>
+                    <div class="slider-slide">
+                        <h4>Diapositiva 2</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, aperiam. Commodi nihil unde iusto non expedita quaerat et reiciendis excepturi magnam maiores! Nulla porro exercitationem voluptas saepe excepturi magni voluptatum.
+                            Libero voluptatem a quo velit, inventore asperiores incidunt! Eligendi perspiciatis nesciunt dignissimos porruae?</p>
+                        </div>
+                        <div class="slider-slide">
+                            <img src="https://placeimg.com/500/500/nature" alt="Naturaleza">
+                        </div>
+                        <div class="slider-slide">
+                            <h4>Diapositiva 4</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, aperiam. Commodi nihil unde iusto non expedita quaerat et reiciendis excepturi magnam maiores! Nulla porro exercitationem voluptas saepe excepturi magni voluptatum.
+                                Libero voluptatem a quo velit, inventore asperiores incidunt! Eligendi perspiciatis nesciunt dignissimos por quae?</p>
+                            </div>
+                </div>
+                <div class="slider-btns">
+                            <a href="#" class="prev">&laquo;</a>
+                            <a href="#" class="next">&raquo;</a>
+                </div>
+            </div>
+                </section>
+                <button class="caja-puños none"> 
+                    <img class="puño-scroll" src="/assets/punio.svg" alt="puño lgtb" title="puño-lgtb">
+                </button>
+                <section id="section-13"  data-scroll-spy><h3>Intersection Observer</h3>
+                </section>
+
+                <section id="section-14"  data-scroll-spy class="bg-color-section"><h3>Video inteligente</h3> 
+
+                    <video src="/assets/video.mp4" width="800" height="800" controls data-inteligent id="video-inteligente"></video>
+                </section>
+                    <section id="section-15"  data-scroll-spy><h3>Validando Formulario con HTML5</h3>
+                        <form class="contact-form" action="https://formsubmit.co/benideveloperr@gmail.com" method="POST" target="_blank">
+                            <legend>Envíanos tus comentarios</legend>
+                            <input type="text" name="name" placeholder="Ingresa tu nombre" title="El campo sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                            <input type="email" name="e-mail" placeholder="Ingresa correo electronico" title="Correo incorrecto" pattern="^[a-z0-9]+(.[._a-z0-9]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,15})$" required>
+                            <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+                            <textarea name="comments"  cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" title="Tu comentario no debe exceder los 255 caracteres" required></textarea>
+                            <input type="submit" value="Enviar">
+                            <div class="contact-form-loader none">
+                                <img class="contact-form-svg" src="/assets/hearts.svg" alt="cargando"></img>
+                            </div>
+
+                                <div class="contact-form-response none">
+                                    <p>Los datos han sido enviados</p>
+                            </div>
+                        </form>
+                        </section>
+                        <section id="section-16"  data-scroll-spy><h3>Narrador</h3>
+                            <select id="speech-select">
+                                <option value="">--- Elige una voz ---</option>
+                            </select>
+                            <br><br>
+                            <textarea name="" id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo..."></textarea>
+                            <br><br>
+                            <button id="speech-btn">Leer texto</button>
+                            <br><br>
+                        </section>
+                <button class="theme-dark">💡</button>
+            </main>
+            <script src="js/script.js" type="module"></script>
+        </body>
+        </html>

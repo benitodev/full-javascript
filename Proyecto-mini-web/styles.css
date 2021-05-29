@@ -1,0 +1,581 @@
+
+/*      Restableciendo los valores del navegador            */
+
+html {
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 16px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Antonio', sans-serif;
+  }
+  
+
+#section-1 button{
+  font-family: 'Antonio', sans-serif;
+  font-size: 22px;
+  border: none;
+  background-color: rgba(198, 10, 235, 0.527);
+  color: rgba(255, 255, 255, 0.973);
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 8px;
+  
+}
+
+#section-1 button:hover{
+  background-color: rgba(141, 5, 168, 0.671);
+  color: rgba(160, 160, 160, 0.973);
+}
+
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+  
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: rgba(252, 252, 252, 0.808);
+  }
+
+#section-1{
+  padding: 10rem;
+}
+
+
+
+h1{
+    position: sticky;
+
+    height: 60px;
+    width: 100%;
+    margin-top: 0px;
+    background-color:rgba(255, 217, 0, 0.87) ;
+    text-align: center;
+    z-index: 995;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  /* Site styles*/
+
+section[id|="section"]{
+    color: rgba(220, green, blue, alpha);
+    text-align: center;
+    min-height: 100vh;
+    font-size: 26px;
+    /* margin-top: 130px; */
+ 
+}
+
+
+
+a{
+  font-size: 1.02rem;
+}
+
+/*   Header  */
+
+.header{
+  top: 0;
+  position: fixed;
+z-index: 1000;
+  width: 100%;
+  height: 7.4rem;
+ 
+}
+
+
+/* Scroll Top*/
+.puño-scroll{
+  cursor: pointer;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+
+.caja-puños{
+  
+  position: fixed;
+  right: 220px;
+  bottom: 1px;
+  width: 120px;
+
+
+  background-color: transparent;
+  border: none;
+}
+
+
+
+/*   Menu  */
+
+ .menu{    
+  display: flex; 
+  flex-direction: column;
+
+  overflow-y: auto;
+  position: fixed;
+
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 998;
+  background-color: rgba(44, 44, 41, 0.664);
+  transform: translate(0, -300%);
+  transition: transform .8s ease;
+}
+
+.menu.is-active{
+  transform: translate(0, 0);
+}
+
+
+
+.menu a {
+  padding: 4.3rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  
+  color: rgb(205, 207, 40);
+  
+}
+
+
+.menu a:hover {
+  background-color: rgba(26, 211, 165, 0.664);
+  transition: all 1s ease;
+}
+
+
+
+
+/*   Button   */
+.boton-caja{
+    position: fixed;
+    z-index: 999;
+    right: 30px;
+    bottom: 10px;
+    border: none;
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background-color: rgba(243, 210, 22, 0.952);
+    /* cursor: pointer; */
+}
+
+.boton-caja:hover{
+  background-color: rgba(214, 183, 9, 0.788);
+  opacity: .8;
+}
+
+
+#boton-menu{
+    margin-top: 5px;
+    width: 90px;
+    cursor: pointer;
+    
+}
+
+
+
+#boton-menu-close {
+  width: 110px;
+  cursor: pointer;
+}
+
+
+
+/*  Utilities - Clases para usar en otros proyectos*/
+
+.none{
+  display: none;
+}
+
+
+/*   Events of Keyboard */
+
+.ball{
+  margin: auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: rgb(205, 207, 40);
+  animation: color 6s infinite ease .7s backwards;
+}
+
+@keyframes color {
+  0%{
+
+    background-color: rgba(10, 180, 67, 0.918);
+  }
+
+
+  50%{
+
+    background-color: rgba(12, 12, 180, 0.836);
+  }
+
+  100%{
+    background-color: rgba(199, 14, 29, 0.836);
+  }
+}
+
+.stage{
+  display: flex;
+  min-height: 60vh;
+  margin: 15px;
+  background-color: rgba(26, 26, 23, 0.89) ;
+}
+
+
+
+.bg-color-section{
+  background-color: rgba(154, 159, 160, 0.904);
+}
+
+
+.theme-dark{
+  position: fixed;
+  bottom: 10px;
+  left: 30px;
+  border: none;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(7, 7, 7, 0.836);
+  cursor: pointer;
+}
+
+.theme-dark:hover {
+  background-color: rgba(15, 15, 15, 0.973);
+  opacity: .8;
+}
+
+.theme-dark{
+  font-size: 55px;
+}
+
+
+.darkClass{
+  background-color: rgba(7, 7, 7, 0.836);
+  color: gold;
+}
+
+.specialClass{
+  background-color: rgba(211, 14, 135, 0.836);
+
+}
+
+/*** Class cards (JS dinamic) ****/
+
+.card{
+  display: inline-block;
+  background-color: rgb(19, 18, 18);
+  color: rgba(211, 14, 135, 0.836);
+
+}
+
+/********** Network status *************/
+.online,
+.offline{
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(13, 146, 57, 0.918);
+}
+
+
+.offline{
+  background-color: rgba(209, 6, 23, 0.836);
+}
+
+
+
+
+/*** Mini arrays ***/
+
+#section-10 h4{
+ margin: 10px 0px;
+
+}
+
+/* #section-10{
+  height: 120vh;
+} */
+
+#cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+}
+
+.card-filter{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+.card{
+  max-width: 200px;
+  background-color: rgba(7, 7, 7, 0.836);
+  color: rgba(198, 10, 235, 0.527);
+  transition: all .3s ease-out;
+}
+
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card figcaption {
+  padding: 1rem;
+}
+
+.filter{
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
+}
+
+
+/*****  Slider *******/
+
+.slider{
+  position: relative;
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.slider-slides{
+  position: relative;
+  height: 500px;
+
+}
+
+.slider-slide{
+
+  position: absolute ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+}
+
+.slider-slide img{
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+.slider-btns{
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  font-size: 190px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: thin solid rgb(19, 18, 18);
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+  font-size: 2.25rem;
+}
+
+.slider a:hover{
+  color: rgba(15, 15, 15, 0.788);
+}
+
+.slider-slide.active{
+  opacity: 1;
+  visibility:visible;
+}
+
+/************* Scroll Spy ****************/
+
+@media screen and (min-width: 1024px){
+
+  .panel-btn{
+    display: none;
+  }
+
+
+  .menu{
+
+    width: 210px;
+    position: fixed;
+    right: 0px;
+    left: initial;
+   top: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+
+  .menu a {
+    font-size: 1.2rem;
+    padding: 20px;
+    text-align: right;
+    color: rgb(188, 190, 47);
+  }
+
+  .menu a:hover,
+  .menu a.actives{
+    color: black;
+    background-color: rgb(8, 192, 146);
+
+  }
+
+
+  .caja-puños{
+    
+
+    left: calc(220px + 1vw);
+  }
+ 
+  main{
+   width: 80%;
+   margin-left: 10px;
+  }
+  .header{
+    height: 50px;
+  }
+}
+
+
+/***********  FORMS  Validations   *********/
+
+.contact-form{
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.contact-form > *{
+  padding: .5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: none;}
+
+
+.contact-form legend,
+.contact-form-response{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-form input{
+  height: 60px;
+}
+
+.contact-form input[type="submit"]{
+  width: 40%;
+  font-weight: bold;
+  cursor: pointer;
+  color: #81d810;
+  background-color: rgb(7, 177, 112);
+  border: none;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  
+}
+
+.contact-form > *::placeholder{
+  color: #1c2270;
+  font-size: 1.1rem;
+  /* background-color: #f44336; */
+}
+
+.contact-form [required]:valid{
+  border: 3px solid #1be700;
+
+  
+}
+
+
+.contact-form [required]:invalid{
+  border: 3px solid var(--form-error-color);
+  
+}
+
+.contact-form-error{
+  margin-bottom: 1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 3s ease;
+}
+
+
+
+
+
+.contact-form-error.is-active {
+  display: block;
+  animation: show-message 3s 1 normal 0s ease-out both;
+}
+
+.none{
+  display: none;
+}
+
+@keyframes show-messasge {
+  0%{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}
