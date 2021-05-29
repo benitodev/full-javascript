@@ -5,7 +5,7 @@
 
 ## 
 
--[Entrar a la página con multiples eventos](https://benitodev.github.io/full-javascript/Proyecto-mini-web)
+-[Entrar a la página con multiples eventos](https://benitodev.github.io/full-javascript/Proyecto-mini-web/index.html)
 
 
 
