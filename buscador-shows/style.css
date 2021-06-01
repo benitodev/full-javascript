@@ -1,0 +1,69 @@
+
+h1{
+    margin: 0;
+
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 2.4rem;
+    background-color: rgba(22, 34, 70, 0.274);
+    color: rgb(159, 154, 204);
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 2px 0px 0px #405085;
+}
+
+body{
+    margin: 0;
+
+    background-image: linear-gradient(#a57acc, #001C74);
+    background-color: #001C74;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+
+
+
+#search{
+    align-self: center;
+    min-width: 30vw;
+    height: 90px;
+    background-color: rgb(209, 187, 216);
+    border: none;
+    outline: none;
+    
+    color: rgb(3, 3, 3);
+    font-size: 2.1rem;
+    
+}
+
+section{
+    flex-grow: 1;
+}
+
+#search::placeholder{
+    color: rgba(11, 12, 10, 0.664);
+    font-size: 2rem;
+}
+
+.loader{
+    width:16rem;
+    height: 16rem;
+    
+}
+
+.grid-fluid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+
+.link-pelis{
+    text-decoration: none;
+    background-color: antiquewhite;
+}
