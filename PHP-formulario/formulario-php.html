@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <section id="section-15" ><h1>Envío de formulario con api Fetch</h1>
+        <form class="contact-form" target="_blank" rel="noopener">
+            <legend>Envíanos tus comentarios</legend>
+            <input type="text" name="name" placeholder="Ingresa tu nombre" title="El campo sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+            <input type="email" name="e-mail" placeholder="Ingresa correo electronico" title="Correo incorrecto" pattern="^[a-z0-9]+(.[._a-z0-9]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,15})$" required>
+            <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+            <textarea name="comments"  cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" title="Tu comentario no debe exceder los 255 caracteres" required></textarea>
+            <input type="submit" value="Enviar">
+            <div class="contact-form-loader none">
+                <img class="contact-form-svg" src="./hearts.svg" alt="cargando"></img>
+            </div>
+    
+                <div class="contact-form-response none">
+                    <p>Los datos han sido enviados</p>
+            </div>
+        </form>
+        </section>
+<script>
+
+const d = document;
+
+ function contactFormValidation() {
+    const $form = d.querySelector(".contact-form"),
+    $inputs = d.querySelectorAll(".contact-form [required]");
+    
+    
+    $inputs.forEach((input) => {
+        const $span = d.createElement("span");
+        $span.id = input.name;
+        $span.textContent = input.title;
+
+        input.style.setProperty("margin-bottom", "0px")
+        $span.style.setProperty("margin-top", "0px")
+
+        $span.classList.add("contact-form-error", "none");
+        input.insertAdjacentElement("afterend", $span);
+    });
+
+    d.addEventListener("keyup", e => {
+        if(e.target.matches(".contact-form [required]")){
+            let $input = e.target,
+            patterns = $input.pattern || $input.dataset.pattern ;
+            console.log(patterns)  
+
+            if(patterns && $input.value !== ""){
+
+
+                let regex = new RegExp(patterns)
+
+                return (!regex.exec($input.value))
+
+                ? d.getElementById($input.name).classList.add("is-active")
+                : d.getElementById($input.name).classList.remove("is-active")
+            }
+
+            if(!patterns && $input.value !== ""){
+               return $input.value === ""
+                ? d.getElementById($input.name).classList.add("is-active")
+                : d.getElementById($input.name).classList.remove("is-active")
+            }
+        }
+
+    } )
+
+
+    d.addEventListener("submit", e => {
+        // e.preventDefault();
+        alert("enviandoo master")
+
+        const $loader = d.querySelector(".contact-form-loader"),
+        $response = d.querySelector(".contact-form-response");
+        
+        $response.style.setProperty("background-color", "green")
+        
+
+        $loader.classList.remove("none");
+
+        fetch("./send_mail.php", {
+            method: "POST",
+            body: new FormData(e.target)
+        })
+        .then(res => res.ok ? res.json() : Promise.reject()
+        
+       )
+        .then(json => { 
+            
+            console.log(json)
+        
+            $loader.classList.add("none");
+            $response.classList.remove("none");
+            $response.innerHTML = `<p>${json.message}</p>`
+            $form.reset();
+        
+        
+        })
+        .catch(err => {
+            let message = err.statusText || "Ocurrió un error al enviar";
+            $response.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
+            console.log(err);
+        })
+        .finally(() => setTimeout(() => {
+            $response.classList.add("none")
+            $response.innerHTML = ""
+        }, 6000))
+    });
+}
+
+
+
+d.addEventListener("DOMContentLoaded", contactFormValidation);
+
+
+</script>
+</body>
+</html>

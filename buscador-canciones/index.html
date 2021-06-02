@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>Buscador de canciones</title>
+</head>
+<body>
+    <h1>Buscador de artistas con la API AudioDB</h1>
+    <form id="song-search">
+
+        <input type="text" name="artist" placeholder="Nombre del artista" required >
+        <!-- <input type="text" name="song" placeholder="Nombre de la canción"> -->
+        <input type="submit">
+    </form>
+    <img src="assets/hearts.svg" alt="Cargando" class="loader">
+    <aside class="error"></aside>
+    <main>
+        <h2>Información del Artista</h2>
+     
+        <article class="artist">
+        </article>
+ 
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

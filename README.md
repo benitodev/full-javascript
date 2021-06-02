@@ -15,4 +15,14 @@
 ## Página con buscador de shows. Llamado con la API Fetch y TVMaze. Responsive design 
 -[Entrar a la página de buscador de shows](https://benitodev.github.io/full-javascript/buscador-shows/index.html)
 
+
+## Página con buscador de artistas. Llamado con la API audioDB.
+-[Entrar a la página para buscar artistas](https://benitodev.github.io/full-javascript/buscador-canciones/index.html)
+
+
+## Página con validación y envíos de formularios al mail. Utilizando PHP-Mailer.
+-[Entrar a la página con envio de formulario a mail](https://benitodev.github.io/full-javascript/PHP-formulario/formulario-php.html)
+
+
+
 Diseñado por @benitokaa
