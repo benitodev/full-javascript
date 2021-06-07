@@ -1,0 +1,43 @@
+
+body{
+    text-align: center;
+    background-color: rgb(17, 99, 99);
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+
+#provincia{
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    width: 50%;
+    height: 5vh;
+   
+}
+
+#departamento{
+    width: 50vw;
+    height: 5vh;
+}
+
+
+.select{
+    border: none;
+    font-size: 1.2rem;
+    outline-color: rgb(121, 121, 121);
+    background-color: rgb(116, 163, 41);
+    color: rgb(255, 255, 255);
+}
+
+.select option{
+    border: none;
+    background-color: rgb(10, 90, 37);
+}
+
+.none{
+    display: none;
+}
